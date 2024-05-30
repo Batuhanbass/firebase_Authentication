@@ -54,7 +54,7 @@ fun Anasayfa(navController: NavController,vm:FbViewModel){
             ){
             Button(onClick = { navController.navigate(DestinaitonScreen.Signup.route) },
                 colors = ButtonDefaults.buttonColors(Color.Transparent), modifier = Modifier.width(300.dp)) {
-                Text(text = "Giris", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+                Text(text = "Kayıt ol", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
 
             }
         }
@@ -71,7 +71,7 @@ fun Anasayfa(navController: NavController,vm:FbViewModel){
         ){
             Button(onClick = { navController.navigate(DestinaitonScreen.login.route) },
                 colors = ButtonDefaults.buttonColors(Color.Transparent), modifier = Modifier.width(300.dp)) {
-                Text(text = "Kayıt ol", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+                Text(text = "Giris", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
 
             }
         }
