@@ -40,7 +40,7 @@ fun Anasayfa(navController: NavController,vm:FbViewModel){
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
         .fillMaxWidth()
         .padding(top = 100.dp)) {
-        Text(text = "welcome", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Hoş geldiniz", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.height(80.dp))
         Box(modifier = Modifier
             .clip(RoundedCornerShape(50.dp))

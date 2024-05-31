@@ -72,7 +72,7 @@ fun SignupScreen(navController: NavController,vm:FbViewModel) {
             .fillMaxSize()
             .padding(top = 150.dp)
             .verticalScroll(rememberScrollState())){
-        
+
         Text(text = "KAYIT OL", fontWeight = FontWeight.Bold, fontSize =40.sp , color = Color.White)
         Spacer(modifier = Modifier.height(40.dp))
         if(errorE){
@@ -80,7 +80,7 @@ fun SignupScreen(navController: NavController,vm:FbViewModel) {
         }
         TextField(value =email , onValueChange ={email=it}, label = { Text(text = "Email giriniz")},
             leadingIcon = { Icon(painter = painterResource(id = R.drawable.p1), contentDescription =null )}
-        , trailingIcon = {if(email.isEmpty()){
+        , trailingIcon = {if(email.isNotEmpty()){
             Icon(painter = painterResource(id =R.drawable.sil), contentDescription = null,
                 Modifier.clickable { email=emty })
 
@@ -90,18 +90,18 @@ fun SignupScreen(navController: NavController,vm:FbViewModel) {
         Spacer(modifier = Modifier.height(40.dp))
         if (errorP){
             Text(text = "Şifre giriniz", color = Color.Red)
-    
-            
+
+
         }
         if(plength){
             Text(text = "En az 6 karakter giriniz", color = Color.Red)
-            
-            
+
+
         }
         TextField(value =password , onValueChange ={password=it
                                                 plength=it.length<6},label = { Text(text = "Şifre giriniz")},
             leadingIcon = { Icon(painter = painterResource(id = R.drawable.lock), contentDescription =null )}
-            , trailingIcon = {if(password.isEmpty()){
+            , trailingIcon = {if(password.isNotEmpty()){
                 val visibilityIcon=if(passwordVisibility){//Şifre gösterme/kapama
                     painterResource(id = R.drawable.kapali)
                 }
@@ -140,7 +140,7 @@ fun SignupScreen(navController: NavController,vm:FbViewModel) {
             plength=it.length<6},label = { Text(text = "Tekrar Şifre giriniz")},
             leadingIcon = { Icon(painter = painterResource(id = R.drawable.lock),
                 contentDescription =null )}
-            , trailingIcon = {if(cpassword.isEmpty()){
+            , trailingIcon = {if(cpassword.isNotEmpty()){
                 val visibilityIcon=if(cpasswordVisibility){//Şifre gösterme/kapama
                     painterResource(id = R.drawable.kapali)
                 }
